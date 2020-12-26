@@ -4,6 +4,29 @@ numbers
 """
 
 
+def main():
+    useful_variable = 1
+    numbers = []
+
+    while useful_variable != 'done':
+        n = input("Enter a number: ")
+        if n == 'done':
+            useful_variable = n
+
+        try:
+            n = int(n)
+        except ValueError:
+            print("Input should be an integer")
+            continue
+
+        numbers.append(n)
+
+    if numbers:
+        print('total: ', sum(numbers))
+        print('count: ', len(numbers))
+        print('average: ', sum(numbers) / len(numbers))
+    else:
+        print('No numbers have been registered')
 
 
 if __name__ == "__main__":
