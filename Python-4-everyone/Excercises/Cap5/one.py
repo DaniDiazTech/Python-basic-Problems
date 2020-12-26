@@ -10,16 +10,17 @@ def main():
 
     while useful_variable != 'done':
         n = input("Enter a number: ")
+
         if n == 'done':
             useful_variable = n
+        else:
+            try:
+                n = int(n)
+            except ValueError:
+                print("Input should be an integer")
+                continue
 
-        try:
-            n = int(n)
-        except ValueError:
-            print("Input should be an integer")
-            continue
-
-        numbers.append(n)
+            numbers.append(n)
 
     if numbers:
         print('total: ', sum(numbers))
