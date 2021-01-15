@@ -24,7 +24,7 @@ def find_in_dict(string, dictionary):
 
 def main():
 
-    read_file = open_file("words.txt").read().splitlines()
+    read_file = open_file("../Cap8/romeo-full.txt")
     word_to_search = input("word to search: ")
 
     file_dict = {}
@@ -37,6 +37,7 @@ def main():
     print(*[f"The word '{word_to_search}' is in the file" if find_in_dict(
         word_to_search, file_dict) else f"{word_to_search} is not in the file"])
 
+    print(file_dict)
 
 if __name__ == "__main__":
     main()
