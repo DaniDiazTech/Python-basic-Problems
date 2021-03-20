@@ -4,6 +4,7 @@ the common words in those two files and
 add it to file3.txt
 """
 
+
 def open_file(filename):
 
     try:
@@ -23,12 +24,16 @@ def read_files(filename):
 
     myfile = open_file(filename)
 
-    file_dict = {}
+    file_set = set()
 
     for line in myfile:
 
         for word in line.strip():
-            file_dict[word] = file_dict.get(word, )
+            file_set.add(word)
+    
+    return file_set
+
+print(read_files("text_files/romeo.txt"))
 
 
 
