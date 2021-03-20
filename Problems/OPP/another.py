@@ -12,12 +12,6 @@ class Myclass:
 
 class MySubClass(Myclass):
 
-    @property
-    def get_default_name(self):
-        self.default_name = self.name + "default"
-        return self.default_name
-
-    @get_default_name.setter
     def print_default_name(self):
         print(self.default_name)
 
